@@ -34,6 +34,9 @@ def download(id, destination):
 
 
 if __name__ == "__main__":
-    files = json.loads(Path("dataset_ids.json").read_text())
+    data_dir = Path("data/")
+    data_dir.mkdir(parents=True, exist_ok=True)
+
+    files = json.loads(Path(data_dir, "dataset_ids.json").read_text())
     for destination, file_id in files.items():
         download(file_id, destination)
