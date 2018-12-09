@@ -1,4 +1,6 @@
 creds.json
+dataset_ids.json
+data/
 
 ### Audio ###
 *.aif
